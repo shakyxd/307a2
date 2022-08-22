@@ -8,11 +8,11 @@ class SignupContr extends Signup{
     public function __construct($uid,$pwd,$utype){
         $this->uid =$uid;
         $this->pwd =$pwd;
-        $this->utype=$utype;
+        $this->utype =$utype;
     }
 
     public function signupUser(){
-        if($this->emptyImput()== false){
+        if($this->emptyInput()== false){
             header("location:../index.php?error=emptyinput");
             exit();
         }
@@ -20,7 +20,7 @@ class SignupContr extends Signup{
             header("location:../index.php?error=username");
             exit();
         }
-        if($this->uidTakensCheck()== false){
+        if($this->uidTakenCheck()== false){
             header("location:../index.php?error=usernametaken");
             exit();
         }
@@ -50,7 +50,7 @@ class SignupContr extends Signup{
     }
 
     private function uidTakenCheck(){
-        $result;
+        $result= true;
         if(!$this->checkUser($this->uid)){
             $result=false;
         }

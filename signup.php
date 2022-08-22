@@ -10,10 +10,10 @@ if(isset($_POST["submit"]))
     include "./classes/dbh.classes.php";
     include "./classes/signup.classes.php";
     include "./classes/signup-contr.classes.php";
-    $signup = new SignupContr($uid,$pwd,$utype);
+    $signup = new SignupContr($uid, $pwd, $utype);
 
     //running error handlers and user signup    
-    $signupUser->signupUser();
+    $signup->signupUser();
     //going back to front page
     header("location:index.php?error=none");
 }
