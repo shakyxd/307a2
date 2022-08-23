@@ -2,11 +2,17 @@
 
 class SignupContr extends Signup{
     private $uid;
+    private $surname;
+    private $email;
+    private $phone;
     private $pwd;
     private $utype;
 
-    public function __construct($uid,$pwd,$utype){
+    public function __construct($uid,$surname,$email,$phone,$pwd,$utype){
         $this->uid =$uid;
+        $this->surname =$surname;
+        $this->email=$email;
+        $this->phone=$phone;
         $this->pwd =$pwd;
         $this->utype =$utype;
     }
@@ -16,20 +22,16 @@ class SignupContr extends Signup{
             header("location:../index.php?error=emptyinput");
             exit();
         }
-        if($this->invalidUid()== false){
-            header("location:../index.php?error=username");
+        if($this->emailTakenCheck()== false){
+            header("location:../index.php?error=emailtaken");
             exit();
         }
-        if($this->uidTakenCheck()== false){
-            header("location:../index.php?error=usernametaken");
-            exit();
-        }
-        $this->setUser($this->uid,$this->pwd ,$this->utype);
+        $this->setUser($this->uid,$this->surname,$this->email,$this->phone,$this->pwd ,$this->utype);
     }
 
     private function emptyInput(){
         $result = true;
-        if(empty($this->uid)||empty($this->pwd)||empty($this->utype)){
+        if(empty($this->uid)||empty($this->surname)||empty($this->email)||empty($this->phone)||empty($this->pwd)||empty($this->utype)){
             $result=false;
         }
         else{
@@ -38,20 +40,9 @@ class SignupContr extends Signup{
         return $result;
     }
 
-    private function invalidUid(){
-        $result = true;
-        if(!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)){
-            $result=false;
-        }
-        else{
-            $result = true;
-        }
-        return $result;
-    }
-
-    private function uidTakenCheck(){
+    private function emailTakenCheck(){
         $result= true;
-        if(!$this->checkUser($this->uid)){
+        if(!$this->checkUser($this->email)){
             $result=false;
         }
         else{

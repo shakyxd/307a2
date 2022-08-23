@@ -11,7 +11,7 @@
 p{
     font-size: 16px;
     font-family: Poppins;
-    color: #fff;
+    color: black;
     line-height: 24px;
 }
 
@@ -23,7 +23,7 @@ h4{
 }
 header{
     width:100%;
-    height: 80px;
+    height: 70px;
     background-color: #161616;
 }
 header nav{
@@ -32,4 +32,73 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+header nav div h3{
+    font-family: Poppins;
+    color:#fefefe;
+    padding-left: 50px;
+}
+header nav .menu-member{
+    width:fit-content;
+    height: fit-content;
+    list-style: none;
+    margin-right:40px;
+    font-family: Poppins;
+}
+header nav .menu-member li {
+    display: inline-block;
+    color:#fff;
+}
+
+header nav .menu-member li a {
+    font-size: 16px;
+    font-family: Poppins;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+.header-login-a {
+    background-color: #3F97EF;
+    border-radius: 4px;
+}
+header a:hover {
+    opacity: 80%;
+}
+.header-login-a:hover {
+    background-color: #2073C7;
+    opacity: 100%;
+}
+.admin-menu{
+    width:fit-content;
+    height: fit-content;
+    list-style: none;
+    font-family: Poppins;
+    justify-content: center;
+}
+.admin-menu li {
+    display: inline-block;
+    color:#fff;
+}
+
+.admin-menu li a {
+    font-size: 30px;
+    font-family: Poppins;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+.admin-menu-item {
+    background-color: #3F97EF;
+    border-radius: 4px;
+}
+.admin-menu-item a:hover {
+    opacity: 80%;
+}
+.admin-menu-item:hover {
+    background-color: #2073C7;
+    opacity: 100%;
+}
+.admin{
+    display:table;
+    margin:0 auto;
 }
