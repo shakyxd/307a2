@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body style="background-color:#D3D3D3;">
     <header>
         <nav>
             <div>
-                <h3>My Rent Buddy</h3>
+                <h3><a href=index.php>My Rent Buddy</a></h3>
             </div>
             <ul class="menu-member">
                 <?php

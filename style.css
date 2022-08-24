@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
 }
-
 .wrapper{
     width:900px;
     margin:0 auto;
@@ -38,6 +37,10 @@ header nav div h3{
     color:#fefefe;
     padding-left: 50px;
 }
+header nav div h3 a{
+    text-decoration: none;
+    color:#fff;
+}
 header nav .menu-member{
     width:fit-content;
     height: fit-content;
@@ -60,6 +63,8 @@ header nav .menu-member li a {
 .header-login-a {
     background-color: #3F97EF;
     border-radius: 4px;
+    font-family:Poppins;
+    color:#fff;
 }
 header a:hover {
     opacity: 80%;
@@ -81,7 +86,7 @@ header a:hover {
 }
 
 .admin-menu li a {
-    font-size: 30px;
+    font-size: 20px;
     font-family: Poppins;
     color: #fff;
     text-decoration: none;
@@ -99,6 +104,64 @@ header a:hover {
     opacity: 100%;
 }
 .admin{
+    display:table;
+    margin:0 auto;
+}
+table,td,th{
+    border:1px solid;
+    padding:10px;
+}
+table{
+    border-collapse: collapse;
+    display:table;
+    margin:0 auto;
+    font-family:Poppins;
+}
+.modbtn {
+    background-color: #3F97EF;
+    border-radius: 4px;
+    font-family:Poppins;
+    color:#fff;
+    text-decoration: none;
+    padding:5px 10px;
+}
+.modbtn:hover {
+    background-color: #2073C7;
+    opacity: 100%;
+}
+.insertcarform-container{
+    font-size:20px;
+    font-family:Poppins;
+    display:table;
+    margin:0 auto;
+}
+.insertcarsubmitbtn{
+    background-color: #3F97EF;
+    border-radius: 4px;
+    font-family:Poppins;
+    color:#fff;
+    text-decoration: none;
+    padding:5px 10px;
+    font-size:20px;
+}
+.insertcarsubmitbtn:hover {
+    background-color: #2073C7;
+    opacity: 100%;
+}
+.delbtn {
+    background-color: #ff2e2e;
+    border-radius: 4px;
+    font-family:Poppins;
+    color:#fff;
+    text-decoration: none;
+    padding:5px 10px;
+}
+.delbtn:hover {
+    background-color: #8f0000;
+    opacity: 100%;
+}
+.searchbar{
+    font-family: Poppins;
     display:table;
     margin:0 auto;
 }

@@ -16,7 +16,7 @@ include_once 'header.php';
                     <label for="utypeadmin">Admin</label>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="utyperenter" name="utype" value="Renter">
                     <label for="utyperenter">Renter</label></br>
-                    <button type="submit" name="submit">SIGN UP</button>
+                    <button type="submit" class="insertcarsubmitbtn"name="submit">SIGN UP</button>
                 </form>
             </div>
                 </br></br>
@@ -26,7 +26,7 @@ include_once 'header.php';
                 <form action="login.php" method="post">
                     <input type="text" id="email"name="email" placeholder="email address"></br>
                     <input type="password" id="pwd" name="pwd" placeholder="Password"></br>
-                    <button type="submit" name="submit">LOGIN</button>
+                    <button type="submit"class="insertcarsubmitbtn" name="submit">LOGIN</button>
                 </form>
             </div>
         </div>
