@@ -9,11 +9,14 @@ $data=mysqli_connect($host,$user,$password,$db);
 if($data===false){
     die("connection error");
 }
+if(isset($_SESSION["userid"])){
+    $uid=$_SESSION["userid"];
+}
 ?>
     </br></br>
     <div class="admin">
         <ul class="admin-menu">
-            <li><a href="rentedlist.php" class="admin-menu-item">View your Rented Cars</a></li>
+            <li><a href="rentedlist.php?uid=<?php echo $uid;?>" class="admin-menu-item">View your Rented Cars</a></li>
         </ul>
     </div>
     </br></br>
@@ -40,6 +43,7 @@ if($data===false){
         </thead>
         <tbody>
             <?php
+            
             if(!isset($_GET['search'])){
                 $sql="SELECT * FROM cars WHERE cars_status='Available'";
                 $result=mysqli_query($data,$sql);
@@ -53,13 +57,12 @@ if($data===false){
                             <td>$row[cars_cost]</td>
                             <td>$row[cars_overcost]</td>
                             <td>
-                                <a href='rentcar.php?id=$row[cars_id]' class='modbtn'>Rent Car</a>
+                                <a href='rentcar.php?id=$row[cars_id]&uid=$uid' class='modbtn'>Rent Car</a>
                             </td>
                         </tr>";    
                 }
             }
-            
-            if(isset($_GET['search'])){
+            else{
                 $filtervalues=$_GET['search'];
                 $query="SELECT * FROM cars WHERE CONCAT(cars_plate,cars_model,cars_type) LIKE '%$filtervalues%'";
                 $query_run=mysqli_query($data,$query);
@@ -74,7 +77,7 @@ if($data===false){
                             <td>$items[cars_cost]</td>
                             <td>$items[cars_overcost]</td>
                             <td>
-                                <a href='rentcar.php?id=$items[cars_id]' class='modbtn'>Rent Car</a>
+                                <a href='rentcar.php?id=$items[cars_id]&uid=$uid' class='modbtn'>Rent Car</a>
                             </td>
                         </tr>";
                     }

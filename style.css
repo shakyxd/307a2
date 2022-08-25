@@ -165,3 +165,42 @@ table{
     display:table;
     margin:0 auto;
 }
+h2{
+    font-size:40px;
+    font-family:Poppins;
+    display: table;
+    margin:0 auto;
+}
+.tandc{
+    display: table;
+    margin: 0 auto;
+}
+.rentsection{
+    display: table;
+    margin: 0 auto;
+}
+
+.textlabel{
+    font-family: Poppins;
+    font-size: 20px;
+}
+.anothercar{
+    font-family:Poppins;
+    display: table;
+    margin:0 auto;
+    background-color: #3F97EF;
+    border-radius: 4px;
+    color:#fff;
+    text-decoration: none;
+    padding:5px 10px;
+    font-size:20px;
+    margin-top:10px;
+}
+.anothercar:hover{
+    background-color: #2073C7;
+    opacity: 100%;
+}
+.receiptcontainer{
+    display:table;
+    margin:0 auto;
+}
