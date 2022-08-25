@@ -53,7 +53,7 @@ if(isset($_SESSION["userid"])){
                         <td>$row[return_status]</td>
                         <td>
                             <a href='extendrent.php?id=$row[booking_id]' class='modbtn'>Extend Rent</a>
-                            <a href='returncar.php?id=$row[booking_id]' class='modbtn'>Return Car</a>
+                            <a href='returncar.php?id=$row[booking_id]&cid=$row[cars_id]' class='modbtn'>Return Car</a>
                         </td>
                     </tr>";
                 }
